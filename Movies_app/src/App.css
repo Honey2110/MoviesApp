@@ -59,8 +59,9 @@ body {
 .movies-button {
   position: absolute;
   bottom: 2rem;
+  width: 100%;
 }
-/* style={{height:'40vh',width:'20vw'}} */
+
 .movies-img {
   height: 40vh;
   width: 20vw;

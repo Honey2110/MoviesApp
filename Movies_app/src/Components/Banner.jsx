@@ -8,11 +8,11 @@ export default class Banner extends Component {
     return (
       <>
         {movie == " " ? (
-          <div class="p-5 d-flex flex-column justify-content-center align-items-center">
-          <div class="spinner-border text-light" role="status">
+          <div className="p-5 d-flex flex-column justify-content-center align-items-center">
+            <div className="spinner-border text-light" role="status">
+            </div>
+            <div className="small pt-2 text-light">Loading…</div>
           </div>
-          <div class="small pt-2 text-light">Loading…</div>
-        </div>
         ) : (
           <div className="card banner-card">
             <img

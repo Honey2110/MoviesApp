@@ -16,7 +16,7 @@ export default class Movies extends Component {
   async componentDidMount() {
     const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=5540e483a20e0b20354dabc2d66a31c9&language=en-US&page=${this.state.currPage}`);
     let data = res.data
-    console.log(data);
+    // console.log(data);
     this.setState({
       movies: [...data.results]
     })
@@ -25,7 +25,7 @@ export default class Movies extends Component {
   changeMovies = async () => {
     const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=5540e483a20e0b20354dabc2d66a31c9&language=en-US&page=${this.state.currPage}`);
     let data = res.data
-    console.log(data);
+    // console.log(data);
     this.setState({
       movies: [...data.results]
     })
@@ -66,7 +66,7 @@ export default class Movies extends Component {
       olddata.push(movie)
     }
     localStorage.setItem("movie", JSON.stringify(olddata));
-    console.log(olddata);
+    // console.log(olddata);
     this.handleFavState();
   }
   handleFavState = () => {
@@ -78,7 +78,7 @@ export default class Movies extends Component {
   }
 
   render() {
-    console.log("render");
+    // console.log("render");
     // let movie = movies.results;
     return (
       <>
@@ -109,12 +109,13 @@ export default class Movies extends Component {
                   <div
                     style={{
                       display: "flex",
-                      justifyContent: "center",
+                      // justifyContent: "center",
+                      width: "100%"
                     }}
                   >
                     {this.state.hover == movieObj.id && (
-                      <a className="btn btn-primary movies-button" onClick={() => this.handleFav(movieObj)}>
-                        {this.state.fav.includes(movieObj.id)?"Remove from Fav":"Add to Fav"}
+                      <a className="btn bg-dark text-white movies-button" onClick={() => this.handleFav(movieObj)}>
+                        {this.state.fav.includes(movieObj.id) ? "Remove from Fav" : "Add to Fav"}
                       </a>
                     )}
                   </div>
