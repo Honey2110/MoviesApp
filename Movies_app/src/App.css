@@ -1,7 +1,12 @@
 body {
-  background-color: Beige;
+  /* background-color: whitesmoke; */
+  background-color: black;
 }
 
+.header {
+  display: flex;
+  justify-content: space-around;
+}
 .banner-card {
   width: 100vw;
   margin-top: 5vh;
@@ -59,6 +64,13 @@ body {
 .movies-img {
   height: 40vh;
   width: 20vw;
+}
+.spinner {
+  position: fixed;
+  z-index: 1031;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 400px) {

@@ -3,15 +3,16 @@ import { movies } from "./getmovies";
 
 export default class Banner extends Component {
   render() {
-    console.log(movies);
-    let movie = movies.results[0];
+    let movie = movies.results[3];
 
     return (
       <>
         {movie == " " ? (
-          <div class="spinner-grow mt-5" role="status">
-            <span class="visually-hidden">Loading...</span>
+          <div class="p-5 d-flex flex-column justify-content-center align-items-center">
+          <div class="spinner-border text-light" role="status">
           </div>
+          <div class="small pt-2 text-light">Loading…</div>
+        </div>
         ) : (
           <div className="card banner-card">
             <img
